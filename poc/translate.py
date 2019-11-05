@@ -27,7 +27,7 @@ def readCSV(filename: str):
 
         for line in fileContent:
             key, value = line.strip().split(';')
-            dic[key] = value
+            dic[' ' + key + ' '] = ' ' + value + ' '
 
     return dic
 
