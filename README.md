@@ -2,6 +2,14 @@
 
 Langage Structuré de Demande en français
 
+## TODO
+* Créer une Erreur Voltaire
+```python
+class ErreurVoltaire(Error):
+	"""Lancer lorsqu'il y a une erreur dans la syntaxe"""
+	pass
+```
+
 ## Tableau de correspondance
 
 | SQL             | MonSQL                       | 
