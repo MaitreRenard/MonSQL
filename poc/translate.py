@@ -1,53 +1,7 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
-keywords = { "BETWEEN":"INTERCALERENTRE",
-"IN":"DEDANS",
-"SELECT":"SELECTIONNE",
-"NOT":"PAS",
-"ORDER BY":"ORDONNERPAR",
-"GROUP BY":"REGROUPERPAR",
-"HAVING":"AYANT",
-"OR":"OUBIEN",
-"AND":"AINSIQUE",
-"LIKE":"SEMBLABLEA",
-"INTO":"ALINTERIEUR",
-"DISTINCT":"SANSDUPLICATIONS",
-"SET":"DEFINIT",
-"CHECK":"VERIFIEQUE",
-"ROLLBACK":"RETOURENARRIERE",
-"COMMIT":"COMMETTRE",
-"FROM":"APARTIRDE",
-"WHERE":"OÙ",
-"DROP":"LACHE",
-"ALTER":"MODIFIE",
-"INSERT":"INSERER",
-"UPDATE":"METAJOUR",
-"DELETE":"SUPPRIME",
-"VOID":"VIDE",
-"NULL":"NÉANT",
-"VALUES":"VALEURS",
-"AVG":"MOYENNE",
-"COUNT":"DENOMBRE",
-"CONCAT":"ASSEMBLER",
-"TRUNCATE":"TRONQUE",
-"SLEEP":"DORMIR",
-"UNION":"MISEENCONCUBINAGE",
-"SAVEPOINT":"POINTDESAUVEGARDE",
-"IS":"EST",
-"ALL":"LINTEGRALITE",
-"NUMBER":"NOMBRE",
-"CHAR":"CARACTERE",
-"VARCHAR2":"CARACTEREVARIABLEVERSIONDEUX",
-"CROSS JOIN":"JOINTURECROISEE",
-"INNER JOIN":"JOINTUREDUDEDANS",
-"NATURAL JOIN":"JOINTURENATURELLE",
-"=":"VAUT",
-">=":"SUPERIEUROUVAUT",
-"<=":"INFERIEUROUVAUT",
-"<>":"NEVAUTPAS",
-"#":"CROISILLON" }
-
+keywords = {}
 
 def toFrench(query: str):
     for key in keywords:
@@ -68,7 +22,17 @@ def printMenu():
     print("[2] Traduire en MySQL")
     print("[3] Quitter")
 
+def readCSV(filename: str):
+    with open(filename,'r') as f:
+        fileContent = f.readlines()
+
+        for line in fileContent:
+            key, value = line.strip().split(';')
+            keywords[key] = value
+
 uIn = 0
+readCSV("../keywords.csv")
+print(keywords)
 while uIn != 3:
     printMenu()
     uIn = int(input())
