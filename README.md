@@ -1,4 +1,4 @@
-# MonSql
+# MonSQL
 
 Langage Structuré de Demande en français
 
