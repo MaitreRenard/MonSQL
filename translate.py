@@ -29,7 +29,7 @@ keywords = { "BETWEEN":"INTERCALERENTRE",
 "VALUES":"VALEURS",
 "AVG":"MOYENNE",
 "COUNT":"DENOMBRE",
-"CONCAT":"COLLERDEUXADEUX",
+"CONCAT":"ASSEMBLER",
 "TRUNCATE":"TRONQUE",
 "SLEEP":"DORMIR",
 "UNION":"MISEENCONCUBINAGE",
@@ -57,6 +57,25 @@ def toFrench(query: str):
     return query
 
 def toSQL(query: str):
-    pass
+    for key, value in keywords.items():
+        if value in query:
+            query = query.replace(value,key)
 
-print(toFrench(input("Requête ?\n")))
+    return query
+
+def printMenu():
+    print("[1] Traduire en MonSQL")
+    print("[2] Traduire en MySQL")
+    print("[3] Quitter")
+
+uIn = 0
+while uIn != 3:
+    printMenu()
+    uIn = int(input())
+    if uIn == 1 or uIn == 2:
+        print("Entrez votre requête")
+        if uIn == 1:
+            print(toFrench(input()))
+        else:
+            print(toSQL(input()))
+        print()
