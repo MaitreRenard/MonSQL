@@ -32,7 +32,7 @@ def readCSV(filename: str):
 keywords = readCSV("../keywords.csv")
 parser = argparse.ArgumentParser()
 parser.add_argument("langageDestination", help="Le langage vers lequel vous voulez traduire")
-parser.add_argument("toTranslate", help="La chaîne de caractère à traduire")
+parser.add_argument("toTranslate", nargs='?', help="La chaîne de caractère à traduire")
 parser.add_argument("-f","--file", help="Fichier à traduire")
 args = parser.parse_args()
 
