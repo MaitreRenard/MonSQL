@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
+import argparse
+
 def toFrench(query: str):
     for key in keywords:
         if key in query:
@@ -15,11 +17,6 @@ def toSQL(query: str):
 
     return query
 
-def printMenu():
-    print("[1] Traduire en MonSQL")
-    print("[2] Traduire en MySQL")
-    print("[3] Quitter")
-
 def readCSV(filename: str):
     with open(filename,'r') as f:
         fileContent = f.readlines()
@@ -31,15 +28,32 @@ def readCSV(filename: str):
 
     return dic
 
-uIn = 0
+# Premièrement, mettre en place les mots clés
 keywords = readCSV("../keywords.csv")
-while uIn != 3:
-    printMenu()
-    uIn = int(input())
-    if uIn == 1 or uIn == 2:
-        print("Entrez votre requête")
-        if uIn == 1:
-            print(toFrench(input()))
-        else:
-            print(toSQL(input()))
-        print()
+parser = argparse.ArgumentParser()
+parser.add_argument("langageDestination", help="Le langage vers lequel vous voulez traduire")
+parser.add_argument("toTranslate", help="La chaîne de caractère à traduire")
+parser.add_argument("-f","--file", help="Fichier à traduire")
+args = parser.parse_args()
+
+args.langageDestination = args.langageDestination.lower()
+translated = ''
+
+if args.langageDestination == 'monsql':
+    if args.file is not None:
+        with open(args.file,'r') as f:
+            fileContent = f.read()
+        translated = toFrench(fileContent)
+    else:
+        translated = toFrench(args.toTranslate)
+    print(translated)
+elif args.langageDestination == 'mysql':
+    if args.file is not None:
+        with open(args.file,'r') as f:
+            fileContent = f.read()
+        translated = toSQL(fileContent)
+    else:
+        translated = toSQL(args.toTranslate)
+    print(translated)
+else:
+    print("Je n'ai pas compris en quel langage vous voulez traduire votre chaîne de caractère")
