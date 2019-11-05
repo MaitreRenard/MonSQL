@@ -1,6 +1,6 @@
 # MonSql
 
-Challenge d'injection SQL en français
+Langage Structuré de Demande en français
 
 ## Tableau de correspondance
 
