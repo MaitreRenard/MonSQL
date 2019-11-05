@@ -4,50 +4,74 @@ Challenge d'injection SQL en français
 
 ## Tableau de correspondance
 
-| SQL        | MonSQL                       | 
-|------------|------------------------------| 
-| BETWEEN    | INTERCALERENTRE              | 
-| IN         | DEDANS                       | 
-| NOT        | PAS                          | 
-| ORDER BY   | ORDONNERPAR                  | 
-| GROUP BY   | REGROUPERPAR                 | 
-| HAVING     | AYANT                        | 
-| OR         | OUBIEN                       | 
-| AND        | AINSIQUE                     | 
-| LIKE       | SEMBLABLEA                   | 
-| INTO       | ALINTERIEUR                  | 
-| DISTINCT   | SANSDUPLICATIONS             | 
-| SET        | DEFINIT                      | 
-| CHECK      | VERIFIEQUE                   | 
-| ROLLBACK   | RETOURENARRIERE              | 
-| COMMIT     | COMMETTRE                    | 
-| FROM       | APARTIRDE                    | 
-| WHERE      | OÙ                           | 
-| DROP       | LACHE                        | 
-| ALTER      | MODIFIE                      | 
-| INSERT     | INSERER                      | 
-| UPDATE     | METAJOUR                     | 
-| DELETE     | SUPPRIME                     | 
-| VOID       | VIDE                         | 
-| NULL       | NÉANT                        | 
-| VALUES     | VALEURS                      | 
-| AVG        | MOYENNE                      | 
-| COUNT      | DENOMBRE                     | 
-| CONCAT     | COLLERDEUXADEUX              | 
-| TRUNCATE   | TRONQUE                      | 
-| SLEEP      | DORMIR                       | 
-| UNION      | MISEENCONCUBINAGE            | 
-| SAVEPOINT  | POINTDESAUVEGARDE            | 
-| IS         | EST                          | 
-| ALL        | LINTEGRALITE                 | 
-| NUMBER     | NOMBRE                       | 
-| CHAR       | CARACTERE                    | 
-| VARCHAR2   | CARACTEREVARIABLEVERSIONDEUX | 
-| CROSS JOIN | JOINTURECROISEE              | 
-| INNER JOIN | JOINTUREDUDEDANS             | 
-| =          | VAUT                         | 
-| >=         | SUPERIEUROUVAUT              | 
-| <=         | INFERIEUROUVAUT              | 
-| <>         | NEVAUTPAS                    | 
-| #          | CROISILLON                   | 
+| SQL         | MonSQL                       | 
+|-------------|------------------------------| 
+| ABS         | LARACINEDUCARREDE            | 
+| UPPER       | MAJUSCULER                   | 
+| LOWER       | MINUSCULER                   | 
+| ROUND       | LARRONDIDE                   | 
+| SYSDATE     | MAINTENANT                   | 
+| SUM         | ADDITIONDETOUT               | 
+| AS          | CONNUSOUSLENOMDE             | 
+| MAX         | LECULMINANTDE                | 
+| MIN         | LEMOINDREDE                  | 
+| ANY         | LUNDES                       | 
+| FOREIGN KEY | CLEFPASDECHEZNOUS            | 
+| PRIMARY KEY | CLEF                         | 
+| IS          | EST                          | 
+| CREATE      | CREATIONDE                   | 
+| TABLE       | LATABLE                      | 
+| DATABASE    | LABASEDEDONNEE               | 
+| EXISTS      | ESTPRESENTDANS               | 
+| ALTER       | MODIFIE                      | 
+| AND         | AINSIQUE                     | 
+| AVG         | MOYENNE                      | 
+| BETWEEN     | INTERCALERENTRE              | 
+| CHAR        | CARACTERE                    | 
+| CHECK       | VERIFIEQUE                   | 
+| COMMIT      | COMMETTRE                    | 
+| CONCAT      | ASSEMBLER                    | 
+| COUNT       | DENOMBRE                     | 
+| CROSSJOIN   | JOINTURECROISEE              | 
+| DELETE      | SUPPRIME                     | 
+| DISTINCT    | SANSDUPLICATIONS             | 
+| DIVIDE      | DIVISEPAR                    | 
+| DROP        | LACHE                        | 
+| FROM        | APARTIRDE                    | 
+| GREATEST    | LEPLUSGRANDDE                | 
+| GROUPBY     | REGROUPERPAR                 | 
+| HAVING      | AYANT                        | 
+| IN          | DEDANS                       | 
+| INNERJOIN   | JOINTUREDUDEDANS             | 
+| INSERT      | INSERER                      | 
+| INTERSECT   | ENTRECOUPEMENT               | 
+| INTO        | ALINTERIEUR                  | 
+| IS          | EST                          | 
+| LEAST       | LEPLUSPETITDE                | 
+| LENGTH      | TAILLEDE                     | 
+| LIKE        | SEMBLABLEA                   | 
+| MINUS       | ALADIFFERENCEDE              | 
+| NOT         | PAS                          | 
+| NULL        | NÉANT                        | 
+| NUMBER      | NOMBRE                       | 
+| ORDERBY     | ORDONNERPAR                  | 
+| OR          | OUBIEN                       | 
+| POWER       | PUISSANCE                    | 
+| ROLLBACK    | RETOURENARRIERE              | 
+| SAVEPOINT   | POINTDESAUVEGARDE            | 
+| SET         | DEFINIT                      | 
+| SLEEP       | DORMIR                       | 
+| TRUNCATE    | TRONQUE                      | 
+| UNION       | MISEENCONCUBINAGE            | 
+| UPDATE      | METAJOUR                     | 
+| VALUES      | VALEURS                      | 
+| VARCHAR2    | CARACTEREVARIABLEVERSIONDEUX | 
+| VOID        | VIDE                         | 
+| WHERE       | OÙ                           | 
+| ,           | ET                           | 
+| #           | CROISILLON                   | 
+| =           | VAUT                         | 
+| <>          | NEVAUTPAS                    | 
+| >=          | SUPERIEUROUVAUT              | 
+| <=          | INFERIEUROUVAUT              | 
 
