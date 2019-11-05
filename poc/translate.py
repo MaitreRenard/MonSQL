@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
-keywords = {}
-
 def toFrench(query: str):
     for key in keywords:
         if key in query:
@@ -25,14 +23,16 @@ def printMenu():
 def readCSV(filename: str):
     with open(filename,'r') as f:
         fileContent = f.readlines()
+        dic = {}
 
         for line in fileContent:
             key, value = line.strip().split(';')
-            keywords[key] = value
+            dic[key] = value
+
+    return dic
 
 uIn = 0
-readCSV("../keywords.csv")
-print(keywords)
+keywords = readCSV("../keywords.csv")
 while uIn != 3:
     printMenu()
     uIn = int(input())
