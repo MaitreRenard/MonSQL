@@ -10,6 +10,32 @@ class ErreurVoltaire(Error):
 	pass
 ```
 
+## Build de MySQL
+
+Les sources de MySQL 5.7.28 sont dans le dossier `mysql`.
+
+1. Récupération des sources
+
+[MySQL Server](https://github.com/mysql/mysql-server.git)
+
+2. Installation des dépendances
+
+Il faut installer :
+* cmake
+* cmake-boost
+* bison
+
+3. Construction
+
+```bash
+mkdir <dossier_build>
+cd <dossier_build>
+cmake ..
+make
+make install #sudo peut être nécessaire
+```
+
+
 ## Tableau de correspondance
 
 | SQL             | MonSQL                       | 
